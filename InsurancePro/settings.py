@@ -29,11 +29,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'InsuranceCompany',
 ]
 
 MIDDLEWARE = [
@@ -72,12 +74,12 @@ WSGI_APPLICATION = 'InsurancePro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        'NAME': 'insurancePro',         # 你要存储数据的库名，事先要创建。
-        'USER': 'superray',         # 数据库用户名
-        'PASSWORD': 'Ray@0615',     # 密码
-        'HOST': 'localhost',    # 默认主机
-        'PORT': '3306',         # 数据库使用的端口
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'insurancePro',  # 你要存储数据的库名，事先要创建。
+        'USER': 'superray',  # 数据库用户名
+        'PASSWORD': 'Ray@0615',  # 密码
+        'HOST': 'localhost',  # 默认主机
+        'PORT': '3306',  # 数据库使用的端口
     }
 }
 
@@ -110,9 +112,10 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = USE_TZ = False  # 不使用时区，否则时区更改无效
+USE_TZ = False  # 不使用时区，否则时区更改无效
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
